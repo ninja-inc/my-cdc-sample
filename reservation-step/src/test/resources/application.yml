@@ -1,0 +1,3 @@
+stubrunner:
+  work-offline: true
+  ids: 'jp.co.ninja:reservation-engine:+:stubs:8090'

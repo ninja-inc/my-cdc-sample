@@ -19,7 +19,7 @@ org.springframework.cloud.contract.spec.Contract.make {
 				status 200
 				body "R12345"
 				headers {
-					header('Content-Type', 'text/plain;charset=ISO-8859-1')
+					header('Content-Type', regex('text/html.*'))
 				}
 			}
 }

@@ -4,6 +4,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReservationEngineController {
 	@RequestMapping(
 			value = "/reservations/{reservationId}",
-			method = POST)
+			method = POST,
+			consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.TEXT_HTML_VALUE)
 	public ResponseEntity<String> reservation(
 			@PathVariable("reservationId") String reservationId,
 			@RequestBody ReservationEngineRq request) {
